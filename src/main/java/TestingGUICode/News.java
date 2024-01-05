@@ -22,7 +22,7 @@ public class News {
         // try catch block use to handle exception
         try {
             // create a file object
-            File newsFile = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/NewsSection/NewsSample");
+            File newsFile = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\NewsSection\\NewsSample");
             // create a scanner object
             Scanner sc = new Scanner(newsFile);
             // define variable for counting the number of news (for basic feature)

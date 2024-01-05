@@ -44,7 +44,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -322,7 +322,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -599,7 +599,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);
@@ -648,7 +648,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);
@@ -705,7 +705,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -950,7 +950,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -1197,7 +1197,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);
@@ -1246,7 +1246,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);
@@ -1303,7 +1303,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -1563,7 +1563,7 @@ public class TriviaSection {
         // create an anrray for storing correct answer's index
         String[] answers = new String[numberOfQuestions];
 
-        File triviaSample = new File("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/Triviasection/TriviaSample.txt");
+        File triviaSample = new File("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\Triviasection\\TriviaSample.txt");
         
         try {
             
@@ -1824,7 +1824,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);
@@ -1873,7 +1873,7 @@ public class TriviaSection {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);

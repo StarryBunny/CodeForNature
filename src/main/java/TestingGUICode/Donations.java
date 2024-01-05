@@ -97,7 +97,7 @@ public class Donations {
                 // write to the donation.txt file
                 try{
             
-                    PrintWriter wr = new PrintWriter(new FileOutputStream("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/TestingGUICode/Donations.txt",true));
+                    PrintWriter wr = new PrintWriter(new FileOutputStream("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\TestingGUICode\\Donations.txt",true));
         
                     wr.printf("%s has donated $%.2f to %s\n", database.getUsername(), amount, NGOName);
         
@@ -125,7 +125,7 @@ public class Donations {
         
         // add image
         // insert image to left panel
-        ImageIcon Donationsimage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/donationsPic3.png");
+        ImageIcon Donationsimage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\donationsPic3.png");
         JLabel DonationsL = new JLabel();
         DonationsL.setIcon(Donationsimage);
         

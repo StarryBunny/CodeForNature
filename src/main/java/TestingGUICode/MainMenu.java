@@ -155,36 +155,36 @@ public class MainMenu {
         // --------------- image -----------------
         
         // add image to upper panel
-        ImageIcon profilePic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/profilePic_1.png");
+        ImageIcon profilePic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\profilePic_1.png");
         JLabel proficP = new JLabel();
         proficP.setBounds(10, 0, 100, 100);
         proficP.setIcon(profilePic);
         
         // add image to lower panel
-        ImageIcon image = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/bgMain.jpg");
+        ImageIcon image = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\bgMain.jpg");
         JLabel mainBG = new JLabel();
         mainBG.setBounds(0, 0, 1080, 620);
         mainBG.setIcon(image);
         
         // add image to button
-        ImageIcon triviaBtnPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/triviaPic.png");
+        ImageIcon triviaBtnPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\triviaPic.png");
         triviaBtn.setIcon(triviaBtnPic);
         triviaBtn.setIconTextGap(10);
         
 
-        ImageIcon donationsPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/donationsPic.png");
+        ImageIcon donationsPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\donationsPic.png");
         donationsBtn.setIcon(donationsPic);
         donationsBtn.setIconTextGap(10);
         
-        ImageIcon checkInPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/checkInPic.png");
+        ImageIcon checkInPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\checkInPic.png");
         checkInBtn.setIcon(checkInPic);
         checkInBtn.setIconTextGap(10);
         
-        ImageIcon pointsShopPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/pointsshop.png");
+        ImageIcon pointsShopPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\pointsshop.png");
         pointsShopBtn.setIcon(pointsShopPic);
         pointsShopBtn.setIconTextGap(10);
         
-        ImageIcon newsPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/news.png");
+        ImageIcon newsPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\news.png");
         newsBtn.setIcon(newsPic);
         newsBtn.setIconTextGap(10);
         

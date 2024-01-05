@@ -88,12 +88,12 @@ public class PointsShopMenu {
         });
         
         // add image
-        ImageIcon iconPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/shopingIcon.png");
+        ImageIcon iconPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\shopingIcon.png");
         JLabel iconL = new JLabel();
         iconL.setBounds(310, 0, 100, 100);
         iconL.setIcon(iconPic);
         
-        ImageIcon BGPic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/pointsShopBG.jpg");
+        ImageIcon BGPic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\pointsShopBG.jpg");
         JLabel backgroundL = new JLabel();
         backgroundL.setBounds(0, 0, 515, 370);
         backgroundL.setIcon(BGPic);
@@ -266,17 +266,17 @@ public class PointsShopMenu {
         });
         
         // add image
-        ImageIcon merch1Pic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/merch1.jpg");
+        ImageIcon merch1Pic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\merch1.jpg");
         JLabel merch1L = new JLabel();
         merch1L.setBounds(180, 100, 160, 120);
         merch1L.setIcon(merch1Pic);
         
-        ImageIcon merch2Pic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/merch2.jpg");
+        ImageIcon merch2Pic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\merch2.jpg");
         JLabel merch2L = new JLabel();
         merch2L.setBounds(480, 50, 102, 170);
         merch2L.setIcon(merch2Pic);
         
-        ImageIcon merch3Pic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/merch3.jpg");
+        ImageIcon merch3Pic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\merch3.jpg");
         JLabel merch3L = new JLabel();
         merch3L.setBounds(780, 35, 160, 213);
         merch3L.setIcon(merch3Pic);
@@ -415,7 +415,7 @@ public class PointsShopMenu {
         });
         
         // add image
-        ImageIcon treePic = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/treePic.png");
+        ImageIcon treePic = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\treePic.png");
         JLabel treeL = new JLabel();
         treeL.setBounds(290, 30, 150, 150);
         treeL.setIcon(treePic);

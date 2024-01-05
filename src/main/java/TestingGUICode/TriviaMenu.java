@@ -444,7 +444,7 @@ public class TriviaMenu {
         });
         
         // insert image to top panel
-        ImageIcon welcomeImage = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/welcomePic.png");
+        ImageIcon welcomeImage = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\welcomePic.png");
         JLabel welcomeL = new JLabel();
         welcomeL.setBounds(270, 10, 100, 100);
         welcomeL.setIcon(welcomeImage);

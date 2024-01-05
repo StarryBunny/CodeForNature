@@ -1,6 +1,7 @@
 
 package TestingGUICode;
 
+import LoginSection.Register;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -96,43 +97,49 @@ public class Login {
         signUpB.setFont(new Font("Helvetica Neue", Font.BOLD, 12)); // Set font
         
         loginB.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                
+    public void actionPerformed(ActionEvent e) {
         email = emailTF.getText();
         username = usernameTF.getText();
         char[] passwordChars = passwordTF.getPassword();
-        password = new String(passwordChars); // Convert char array to string
-                
-                try {
-            // Establish database connection
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testing", "root", "Vip4547chew$");
-
-            // Query the database
-            String query = "SELECT id FROM UserAccount WHERE email = ? AND username= ? AND password = ?";
+        String password = new String(passwordChars); // Convert char array to string
+        
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/useraccount", "root", "#Liew2855");
+            String query = "SELECT id, password FROM UserAccount WHERE email = ? AND username= ?";
+            
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, username);
-                preparedStatement.setString(3, password);
-
+                
                 ResultSet resultSet = preparedStatement.executeQuery();
 
                 if (resultSet.next()) {
-                    JOptionPane.showMessageDialog(null, "Login successful!", "Result", JOptionPane.INFORMATION_MESSAGE);
-                    userId = resultSet.getInt("id");
-                    LoginFrame.dispose();
-                    ConnectDatabase db = new ConnectDatabase();
-                    i.instructions();
+                    String storedHashedPassword = resultSet.getString("password");
+                    int storedUserId = resultSet.getInt("id");
+
+                    // Hash the entered password and compare
+                    String hashedEnteredPassword = Register.PasswordHash(password);
+
+                    if (storedHashedPassword.equals(hashedEnteredPassword)) {
+                        JOptionPane.showMessageDialog(null, "Login successful!", "Result", JOptionPane.INFORMATION_MESSAGE);
+                        userId = storedUserId;
+                        LoginFrame.dispose();
+                        ConnectDatabase db = new ConnectDatabase();
+                        i.instructions();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Invalid email or password", "Result", JOptionPane.ERROR_MESSAGE);
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Invalid email or password", "Result", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Invalid email or username", "Result", JOptionPane.ERROR_MESSAGE);
                 }
             }
-            // Close resources
             connection.close();
         } catch (SQLException ee) {
             ee.printStackTrace();
         }
-            }
-        });
+    }
+});
+
         
         signUpB.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -142,6 +149,8 @@ public class Login {
         char[] passwordChars = passwordTF.getPassword();
         String password = new String(passwordChars); // Convert char array to string
         
+        // Hash the password
+        String hashedPassword = Register.PasswordHash(password);
 
         // use regular expressions (regex) to match whether the email enter by user is in correct format
         String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
@@ -150,14 +159,14 @@ public class Login {
             LocalDate currentDate = LocalDate.now();
         try {
             // Establish database connection
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testing", "root", "Vip4547chew$");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/useraccount", "root", "#Liew2855");
 
             // Insert user into the database
             String query = "INSERT INTO UserAccount (email, username, password, registration_date) VALUES (?, ?, ?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, username); 
-                preparedStatement.setString(3, password);
+                preparedStatement.setString(3, hashedPassword);
                 preparedStatement.setDate(4, java.sql.Date.valueOf(currentDate));
 
                 int rowsAffected = preparedStatement.executeUpdate();
@@ -183,7 +192,7 @@ public class Login {
         });
         
         // insert image to left panel
-        ImageIcon image = new ImageIcon("/Users/zhengwei/NetBeansProjects/TriviaSection/src/main/java/LoginPageImage.png");
+        ImageIcon image = new ImageIcon("C:\\Users\\60187\\Documents\\NetBeansProjects\\Assignment\\Login\\PointShop\\CodeForNature\\src\\main\\java\\LoginPageImage.png");
         JLabel loginImage = new JLabel();
         loginImage.setIcon(image);
         

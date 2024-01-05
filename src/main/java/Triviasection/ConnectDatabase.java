@@ -1,6 +1,7 @@
 
 package Triviasection;
 
+import LoginSection.Register;
 import TestingGUICode.Login; // for GUI
 // import LoginSection.*; // for CLI
 import java.sql.*;
@@ -21,9 +22,9 @@ public class ConnectDatabase {
     
     // constructor that connect to database and execute query
     public ConnectDatabase() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/(database_name)";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/useraccount";
         String username = "root";
-        String password = "";
+        String password = "#Liew2855";
 
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
@@ -70,9 +71,9 @@ public class ConnectDatabase {
     
     // method use for update the point
     public void updateCurrentPoint(int newPoint) {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/(database_name)";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/useraccount";
         String username = "root";
-        String password = "";
+        String password = "#Liew2855";
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
 
@@ -97,9 +98,9 @@ public class ConnectDatabase {
     
     // method use for update the question answered
     public void updateQuestionAnswered(String questionAnswered) {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/(database_name)";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/useraccount";
         String username = "root";
-        String password = "";
+        String password = "#Liew2855";
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
 
@@ -124,9 +125,9 @@ public class ConnectDatabase {
     
     // method use for update the check in date
     public void updateCheckInDate(LocalDate lastCheckInDate) {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/(database_name)";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/useraccount";
         String username = "root";
-        String password = "";
+        String password = "#Liew2855";
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
 
@@ -148,6 +149,40 @@ public class ConnectDatabase {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    
+    public boolean validateUser(String email, String password) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/useraccount";
+        String username = "root";
+        String dbPassword = "#Liew2855";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, dbPassword)) {
+            String sqlQuery = "SELECT id, password FROM UserAccount WHERE email = ?";
+            
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery)) {
+                preparedStatement.setString(1, email);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        String storedHashedPassword = resultSet.getString("password");
+                        int userId = resultSet.getInt("id");
+
+                        // Compare hashed passwords
+                        String hashedEnteredPassword = Register.PasswordHash(password);
+
+                        if (storedHashedPassword.equals(hashedEnteredPassword)) {
+                            // Passwords match - valid user
+                            this.userId = userId;
+                            return true;
+                        }
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
     
     // accessor
